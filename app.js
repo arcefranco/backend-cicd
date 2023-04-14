@@ -1,10 +1,40 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
+app.use(cors());
 app.get("/", (req, res) => {
-  res.json({
-    message: "Hello backend",
-  });
+  res.json([
+    {
+      name: "franco",
+    },
+    {
+      name: "juan",
+    },
+    {
+      name: "maria",
+    },
+    {
+      name: "pedro",
+    },
+  ]);
 });
 
-app.listen(3000);
+app.get("/otra", (req, res) => {
+  res.json([
+    {
+      name: "sol",
+    },
+    {
+      name: "adrian",
+    },
+    {
+      name: "tomas",
+    },
+    {
+      name: "jose",
+    },
+  ]);
+});
+
+app.listen(3001);
