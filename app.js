@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
       name: "juan",
     },
     {
-      name: "maria",
+      name: "maría",
     },
     {
       name: "pedro",
