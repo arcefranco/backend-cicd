@@ -29,7 +29,7 @@ app.get("/otra", (req, res) => {
       name: "adrian",
     },
     {
-      name: "tomas",
+      name: "tomás",
     },
     {
       name: "jose",
