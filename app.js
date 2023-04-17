@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
+require("dotenv").config();
 app.use(cors());
 app.get("/", (req, res) => {
   res.json([
     {
-      name: "franco",
+      name: `${process.env.NAME}`,
     },
     {
       name: "juan",
@@ -37,4 +37,6 @@ app.get("/otra", (req, res) => {
   ]);
 });
 
-app.listen(3001);
+app.listen(3001, () => {
+  console.log(`VARIABLE DE ENTORNO`, process.env.NAME);
+});
